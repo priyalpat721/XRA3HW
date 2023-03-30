@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4919737043827269484}
   - component: {fileID: 4919737043827269485}
   - component: {fileID: 4919737043827269482}
-  m_Layer: 5
+  m_Layer: 31
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 4919737044516295982}
   - component: {fileID: 4919737044516296016}
   - component: {fileID: 4919737044516296017}
-  m_Layer: 5
+  m_Layer: 31
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 4919737044859321183}
   - component: {fileID: 4919737044859321153}
   - component: {fileID: 4919737044859321182}
-  m_Layer: 5
+  m_Layer: 31
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,9 +325,11 @@ GameObject:
   - component: {fileID: 8386555927368693655}
   - component: {fileID: 6019060246760194909}
   - component: {fileID: 4919737044327178205}
-  m_Layer: 0
+  - component: {fileID: -4306823571536903226}
+  - component: {fileID: 8292468420928152537}
+  m_Layer: 31
   m_Name: Teal
-  m_TagString: Untagged
+  m_TagString: RightController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -340,8 +342,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5226149291105362568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.115, y: 2.524, z: 0.913}
-  m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.04}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.15999998}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4919737043827269483}
@@ -411,3 +413,40 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.8528949, y: 2, z: 2.1166575}
   m_Center: {x: -0.117395505, y: -0.0000000745058, z: 0.10317359}
+--- !u!54 &-4306823571536903226
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5226149291105362568}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 2
+--- !u!114 &8292468420928152537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5226149291105362568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0800de22181064da0501a7f1271a4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  small: {fileID: 3980470273088568674, guid: c62548bc377279044b42a708149c84db, type: 3}
+  medium: {fileID: 4674280318038800867, guid: 04a3321f50a839e49824e7e04e87eaa9, type: 3}
+  large: {fileID: 2335684934501439400, guid: 25ab115185377bb44b7f42ac236fb477, type: 3}
+  correctHand: RightController
+  wrongHand: LeftController
+  correctController: 2
+  wrongController: 1
+  yay: {fileID: 8300000, guid: 053516c52bec4064aad8bb19b7ec0d70, type: 3}
+  naw: {fileID: 8300000, guid: c485b0fd068bc7245963f9b1379cf502, type: 3}

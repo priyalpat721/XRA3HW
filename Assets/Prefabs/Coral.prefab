@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 6564351684240997823}
   - component: {fileID: 9006553129088125301}
   - component: {fileID: 7727088426731279869}
-  m_Layer: 0
+  - component: {fileID: -5121434786317440050}
+  - component: {fileID: -7020294210020535231}
+  m_Layer: 31
   m_Name: Coral
-  m_TagString: Untagged
+  m_TagString: LeftController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7493224700564514976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.348, y: 2.524, z: 0.913}
-  m_LocalScale: {x: 0.10000001, y: 0.10000001, z: 0.04}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.15999998}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7727088425091349042}
@@ -98,6 +100,43 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9560156, y: 2, z: 1.9846154}
   m_Center: {x: 0.026950238, y: -0.0000000745058, z: 0.07820502}
+--- !u!54 &-5121434786317440050
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7493224700564514976}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 2
+--- !u!114 &-7020294210020535231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7493224700564514976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d0800de22181064da0501a7f1271a4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  small: {fileID: 3980470273088568674, guid: 1e03c210d33544a4d93bcd9fac252458, type: 3}
+  medium: {fileID: 4674280318038800867, guid: 4fc2c388c38c34e4bbe386586c2da96f, type: 3}
+  large: {fileID: 2335684934501439400, guid: c717e54f6a8445247abaa14a3c3ef6b1, type: 3}
+  correctHand: LeftController
+  wrongHand: RightController
+  correctController: 1
+  wrongController: 2
+  yay: {fileID: 8300000, guid: 053516c52bec4064aad8bb19b7ec0d70, type: 3}
+  naw: {fileID: 8300000, guid: c485b0fd068bc7245963f9b1379cf502, type: 3}
 --- !u!1 &7727088425091349043
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,7 +149,7 @@ GameObject:
   - component: {fileID: 7727088425091349055}
   - component: {fileID: 7727088425091349052}
   - component: {fileID: 7727088425091349053}
-  m_Layer: 5
+  m_Layer: 31
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +249,7 @@ GameObject:
   - component: {fileID: 7727088426427747965}
   - component: {fileID: 7727088426427747967}
   - component: {fileID: 7727088426427747964}
-  m_Layer: 5
+  m_Layer: 31
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -287,7 +326,7 @@ GameObject:
   - component: {fileID: 7727088426491018361}
   - component: {fileID: 7727088426491018363}
   - component: {fileID: 7727088426491018360}
-  m_Layer: 5
+  m_Layer: 31
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

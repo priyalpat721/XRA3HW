@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - LeftController
+  - RightController
+  - Scorable
+  - Left
+  - Right
+  - CollidedPlayer
+  - NotScorable
   layers:
   - Default
   - TransparentFX
@@ -34,9 +41,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Player
+  - Target
+  - NoImpact
   m_SortingLayers:
   - name: Default
     uniqueID: 0

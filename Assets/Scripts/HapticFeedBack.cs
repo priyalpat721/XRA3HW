@@ -8,17 +8,9 @@ public class HapticFeedBack : MonoBehaviour
     public void ApplyHapticsFeedBack(OVRInput.Controller controller, AudioClip hapticsSFX)
     {
         OVRHapticsClip hapticsClip = new OVRHapticsClip();
-
-        if (controller == OVRInput.Controller.LTouch)
-        {
-            OVRHaptics.LeftChannel.Preempt(hapticsClip);
-            AudioSource.PlayClipAtPoint(hapticsSFX, gameObject.transform.position);
-        }
-        else
-        {
-            OVRHaptics.RightChannel.Preempt(hapticsClip);
-            AudioSource.PlayClipAtPoint(hapticsSFX, gameObject.transform.position);
-        }
+        OVRHaptics.LeftChannel.Preempt(hapticsClip);
+        AudioSource.PlayClipAtPoint(hapticsSFX, gameObject.transform.position);
+        OVRInput.SetControllerVibration(0.01f, 0.01f, controller);
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -28,7 +20,7 @@ public class HapticFeedBack : MonoBehaviour
             ApplyHapticsFeedBack(OVRInput.Controller.LHand, feedbackClip);
 
         }
-        else
+        else if (gameObject.tag == "RightController")
         {
             ApplyHapticsFeedBack(OVRInput.Controller.RHand, feedbackClip);
 
@@ -43,7 +35,7 @@ public class HapticFeedBack : MonoBehaviour
             ApplyHapticsFeedBack(OVRInput.Controller.LHand, feedbackClip);
 
         }
-        else
+        else if (gameObject.tag == "RightController")
         {
             ApplyHapticsFeedBack(OVRInput.Controller.RHand, feedbackClip);
 
