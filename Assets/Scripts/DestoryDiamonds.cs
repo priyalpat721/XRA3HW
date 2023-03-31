@@ -123,8 +123,10 @@ public class DestoryDiamonds : MonoBehaviour
         scoreNumbers -= scoreNum;
         scoreText.text = new string(scoreNumbers.ToString());
         Rigidbody rigidbody = gameObject.GetComponent<Rigidbody>();
-        rigidbody.velocity = ((transform.up * 10) ) * 10f * Time.deltaTime;
+        Vector3 left = Vector3.Cross(transform.forward, transform.up).normalized;
+        Vector3 right = Vector3.Cross(transform.forward * -1f, transform.up).normalized;
+        rigidbody.velocity = Vector3.Cross(left, right).normalized; 
         AudioSource.PlayClipAtPoint(naw, gameObject.transform.position);
-        Destroy(gameObject, 0.5f);
+        Destroy(gameObject, 1f);
     }
 }
