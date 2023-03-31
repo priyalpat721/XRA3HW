@@ -10,9 +10,14 @@ public class BlockImpact : MonoBehaviour
     GameObject scoreBoard;
     public AudioClip oops;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.layer == 29)
+
+        if (other.gameObject.tag == "LeftController")
+        {
+            ApplyDamage();
+        }
+        else if (other.gameObject.tag == "RightController")
         {
             ApplyDamage();
         }
