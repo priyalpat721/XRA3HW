@@ -128,9 +128,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d0800de22181064da0501a7f1271a4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  small: {fileID: 3980470273088568674, guid: 97906505bd505a7479022785b664056d, type: 3}
-  medium: {fileID: 4674280318038800867, guid: cedc4df0a50123c48a590cae9cc8b0bd, type: 3}
-  large: {fileID: 2335684934501439400, guid: 13948b1f6bc8d1041a431f1b597e4702, type: 3}
+  small: {fileID: 3980470273088568674, guid: 103c1b2542d0b6a4890b66dfd253484f, type: 3}
+  medium: {fileID: 4674280318038800867, guid: 6b752da2540fc1c4f84fbfcbdfabb97e, type: 3}
+  large: {fileID: 2335684934501439400, guid: a6b31f8edd89d7b4eab28553b3bb63fa, type: 3}
   correctHand: RightController
   wrongHand: LeftController
   correctController: 2
