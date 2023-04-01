@@ -21,15 +21,7 @@ public class DestoryDiamonds : MonoBehaviour
 
     GameObject size;
 
-    OVRCameraRig player;
-
     GameObject scoreBoard;
-    // Start is called before the first frame update
-    void Start()
-    {
-        player = FindObjectOfType<OVRCameraRig>();
-        DontDestroyOnLoad(player);
-    }
 
     private void OnCollisionEnter(Collision collision)
     {

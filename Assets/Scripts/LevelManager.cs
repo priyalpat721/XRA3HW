@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
@@ -18,7 +19,7 @@ public class LevelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float scoreNum = int.Parse(score.text);
+        int scoreNum = int.Parse(score.text);
         if (!audioSource.isPlaying)
         {
             if (scoreNum <= 0f)
@@ -36,6 +37,12 @@ public class LevelManager : MonoBehaviour
                     spawn.SetActive(false);
                 }
                 passed.SetActive(true);
+                string currentScene = SceneManager.GetActiveScene().name;
+                int highestScore = PlayerPrefs.GetInt(currentScene);
+                if (highestScore < scoreNum)
+                {
+                    PlayerPrefs.SetInt(currentScene, scoreNum);
+                }
             }
         }
         else
